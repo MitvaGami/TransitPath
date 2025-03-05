@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TransitPath</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="landing-container">
+      <div class="landing-content">
+        <h1>TransitPath</h1>
+        <p>
+          Find the best route for your journey through Delhi's metro network
+        </p>
+        <div class="features">
+          <div class="feature-card">
+            <i class="fas fa-route"></i>
+            <h3>Multiple Routes</h3>
+            <p>Find alternative paths to your destination</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-money-bill-wave"></i>
+            <h3>Fare Calculator</h3>
+            <p>Get accurate fare estimates with applicable discounts</p>
+          </div>
+        </div>
+        <button id="getStarted" class="btn-primary">Get Started</button>
+      </div>
+    </div>
+
+    <!-- User Details Modal -->
+    <div id="userModal" class="modal">
+      <div class="modal-content">
+        <h2>Enter Your Details</h2>
+        <form id="userForm">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required />
+          </div>
+          <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" required min="1" max="120" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" required pattern="[0-9]{10}" />
+          </div>
+          <div class="form-group">
+            <label>
+              <input type="checkbox" id="isStudent" />
+              I am a student
+            </label>
+          </div>
+          <button type="submit" class="btn-primary">Continue</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
