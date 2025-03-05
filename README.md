@@ -1,4 +1,4 @@
-# Metro Route Optimization System
+# TransitPath
 
 A web-based metro route optimization system that helps users find the best routes between stations, including fare calculation and alternative paths.
 
@@ -39,16 +39,7 @@ git clone [your-repository-url]
    - Alternative paths
 4. Click on any route to highlight it on the map
 
-## Project Structure
 
-```
-metro-route-optimization/
-│
-├── index.html          # Main HTML file
-├── styles.css          # CSS styles
-├── script.js          # Main JavaScript file
-└── README.md          # Project documentation
-```
 
 ## Features in Detail
 
@@ -70,6 +61,13 @@ metro-route-optimization/
 - Smooth animations
 - Responsive station network display
 - Clear station labeling
+
+### Screenshots
+![Screenshot 2025-03-05 231936](https://github.com/user-attachments/assets/069a37b9-8434-4448-85d1-a44237090a72)
+![Screenshot 2025-03-05 232435](https://github.com/user-attachments/assets/a594a676-c1a1-45af-939e-f5fe697187b2)
+![Screenshot 2025-03-05 232502](https://github.com/user-attachments/assets/c5cd1e58-a5c4-4c37-a559-c1edaac52d87)
+![Screenshot 2025-03-05 232519](https://github.com/user-attachments/assets/b5a0faef-dcb9-491d-b958-f30aff644dad)
+![Screenshot 2025-03-05 232532](https://github.com/user-attachments/assets/055126e1-eadd-4e93-8fdc-a3d98fe584ad)
 
 ## Contributing
 
