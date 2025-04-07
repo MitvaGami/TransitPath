@@ -62,6 +62,9 @@ git clone [your-repository-url]
 - Responsive station network display
 - Clear station labeling
 
+### Project Flow
+![diagram (1)](https://github.com/user-attachments/assets/49eb4aba-ebb6-4e67-ae37-295aad79f0e6)
+
 ### Screenshots
 ![Screenshot 2025-03-05 231936](https://github.com/user-attachments/assets/069a37b9-8434-4448-85d1-a44237090a72)
 ![Screenshot 2025-03-05 232435](https://github.com/user-attachments/assets/a594a676-c1a1-45af-939e-f5fe697187b2)
