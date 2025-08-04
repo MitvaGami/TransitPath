@@ -1,5 +1,6 @@
 import java.util.*;
 
+	// Represents a metro passenger with personal and fare details
 class Passenger {
 	private String name;
 	private int age;
@@ -7,6 +8,7 @@ class Passenger {
 	private double billAmount;
 	private boolean isStudent, isSenior;
 
+	// Constructor with input validations
 	Passenger(String name, int age, long phoneNo) {
 		if (name == null || name.trim().isEmpty()) {
 			throw new IllegalArgumentException("Name cannot be empty");
@@ -55,17 +57,19 @@ class Passenger {
 		this.isStudent = status;
 	}
 }
+// Represents the metro network graph and route functionalities
 
 class MetroGraph {
 	private int numStations;
-	private List<List<Edge>> adjList;
-	private Map<String, Integer> stationMap;
+	private List<List<Edge>> adjList;  // Adjacency list for graph
+	private Map<String, Integer> stationMap;// Maps station name to ID
 	private String[] stationNames;
 	// Cache for frequently requested routes
 	private Map<String, List<Integer>> routeCache;
 	private static final int MAX_ALTERNATIVE_ROUTES = 3;
 	private static final double MAX_ROUTE_DEVIATION = 1.5; // 50% longer than shortest
 
+// Constructor to initialize metro graph
 	public MetroGraph(int numStations) {
 		this.numStations = numStations;
 		adjList = new ArrayList<>(numStations);
@@ -76,12 +80,12 @@ class MetroGraph {
 		stationNames = new String[numStations];
 		routeCache = new HashMap<>();
 	}
-
+	// Adds a station to the graph
 	public void addStation(String name, int id) {
 		stationMap.put(name, id);
 		stationNames[id] = name;
 	}
-
+	// Adds a bi-directional edge between two stations
 	public void addEdge(int u, int v, int weight) {
 		adjList.get(u).add(new Edge(v, weight));
 		adjList.get(v).add(new Edge(u, weight)); // Bi-directional edges
@@ -92,7 +96,7 @@ class MetroGraph {
 		return start + "|" + end;
 	}
 
-	// Modified findShortestPath with caching
+	// Modified findShortestPath with caching, Finds shortest path using Dijkstra's algorithm (with caching)
 	private List<Integer> findShortestPath(int start, int end, boolean timeOptimized) {
 		String cacheKey = createCacheKey(stationNames[start], stationNames[end]);
 
@@ -172,7 +176,7 @@ class MetroGraph {
 		return findShortestPath(stationMap.get(startName), stationMap.get(endName), timeOptimized);
 	}
 
-	// Improved alternative routes finder
+	//  alternative routes finder
 	public void findAlternativeRoutes(String startName, String endName) {
 		int start = stationMap.get(startName);
 		int end = stationMap.get(endName);
